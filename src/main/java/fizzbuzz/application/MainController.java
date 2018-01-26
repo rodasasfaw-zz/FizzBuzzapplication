@@ -9,11 +9,11 @@ public class MainController {
     public String show() {
         System.out.println("input the ending number here: ");
 
-        Scanner sc = new Scanner(System.in);
-        int x= sc.nextInt();
-        
+        Scanner keyboard = new Scanner(System.in);
+        int Ending_num = keyboard.nextInt();
+
         String message="";
-        for(int i=1; i<=x;i++) {
+        for(int i=1; i<=Ending_num;i++) {
             if(i%5==0&&i%3==0)
                 message= message + "FizzBuzz<br/>";
 
@@ -22,26 +22,11 @@ public class MainController {
             else if(i%5==0)
                 message= message + "Buzz<br/>";
 
-            /*else if(i%7==0)
-                count_7++;
-
-            else if(i%17==0)
-                count_17++;
-            else if(i%23==0)
-                count_23++;
-
-    */
-
             else
                 message= message + Integer.toString(i)+"<br/>";
 
-
        }
-       /*
-        System.out.println("the number of mulfiple of 7 is:"+count_7);
-        System.out.println("the number of mulfiple of 17 is:"+count_17);
-        System.out.println("the number of mulfiple of 23 is:"+count_23);
-*/
+
 return message;
     }
 
